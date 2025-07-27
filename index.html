@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PAD Workflow</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    data-spy="scroll"
+    data-target=".site-navbar-target"
+    data-offset="300"
+    id="home-section"
+  >
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header
+        class="site-navbar js-sticky-header site-navbar-target"
+        role="banner"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo">
+                <a href="index.html" class="h2 mb-0">P.A.D </a>
+              </h1>
+            </div>
+
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav
+                class="site-navigation position-relative text-right"
+                role="navigation"
+              >
+                <ul
+                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+                >
+                  <li>
+                    <a href="#home-section" class="nav-link">Tổng quan</a>
+                  </li>
+                  <li>
+                    <a href="#about-section" class="nav-link">Vẽ POINT</a>
+                  </li>
+                  <li>
+                    <a href="#training-section" class="nav-link">Vẽ ONE</a>
+                  </li>
+                  <li>
+                    <a href="#testimonials-section" class="nav-link"
+                      >Chấm POINT</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#services-section" class="nav-link">Chú thích</a>
+                  </li>
+                  <li>
+                    <a href="#blog-section" class="nav-link">Vẽ hoa gió</a>
+                  </li>
+                  <li>
+                    <a href="#contact-section" class="nav-link">Check- nộp</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div
+              class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+              style="position: relative; top: 3px"
+            >
+              <a href="#" class="site-menu-toggle js-menu-toggle float-right"
+                ><span class="icon-menu h3"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="site-blocks-cover overflow-hidden">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 align-self-center">
+              <div class="row">
+                <div class="col-lg-11">
+                  <h1><span class="typed-words"></span></h1>
+                  <p>Hello!</p>
+                  <p>
+                    <a
+                      href="#contact-section"
+                      class="btn btn-warning px-5 py-3 text-white smoothscroll"
+                      >Check nộp</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="site-section" id="about-section">
+        <div class="container">
+          <div class="col-md-5 mr-auto mb-5 section-top-shiwake">
+            <h2 class="text-black mb-4">I. Vẽ POINT</h2>
+            <h3 class="text-black mb-4">1. 仕分</h3>
+            <div class="box-top-checkbox" data-id="box1">
+              <div class="box-editer">
+                <div style="display: flex; gap: 10px; margin-top: 10px">
+                  <button class="editer-button clickAllBtn">Click All</button>
+                  <button
+                    class="editer-button cancelEditBtn"
+                    style="display: none"
+                  >
+                    Huỷ
+                  </button>
+                  <button class="editer-button editToggleBtn">Sửa</button>
+                </div>
+
+                <div class="editer-wapper wrapper">
+                  <div class="list-top-checkbox"></div>
+                  <form class="editer-add addForm" style="display: none">
+                    <input
+                      type="text"
+                      class="newItemInput"
+                      placeholder="Nhập dòng mới"
+                    />
+                    <button type="submit">Thêm</button>
+                  </form>
+                </div>
+              </div>
+              <div class="box-chart">
+                <canvas class="progressChart"></canvas>
+                <div><strong class="percentText">0%</strong></div>
+              </div>
+            </div>
+            <h3 class="text-black mb-4">2. 変換</h3>
+            <div class="box-top-checkbox" data-id="box2">
+              <div class="box-editer">
+                <div style="display: flex; gap: 10px; margin-top: 10px">
+                  <button class="editer-button clickAllBtn">Click All</button>
+                  <button
+                    class="editer-button cancelEditBtn"
+                    style="display: none"
+                  >
+                    Huỷ
+                  </button>
+                  <button class="editer-button editToggleBtn">Sửa</button>
+                </div>
+
+                <div class="editer-wapper wrapper">
+                  <div class="list-top-checkbox"></div>
+                  <form class="editer-add addForm" style="display: none">
+                    <input
+                      type="text"
+                      class="newItemInput"
+                      placeholder="Nhập dòng mới"
+                    />
+                    <button type="submit">Thêm</button>
+                  </form>
+                </div>
+              </div>
+              <div class="box-chart">
+                <canvas class="progressChart"></canvas>
+                <div><strong class="percentText">0%</strong></div>
+              </div>
+            </div>
+            <!--
+          <div class="col-md-6 ml-auto">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="service px-0">
+                  <div class="icon"><span class="flaticon-money-bag-with-dollar-symbol display-2 text-primary"></span></div>
+                  <h4 class="text-black mb-3">Means of Living</h4>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                    texts.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="service px-0">
+                  <div class="icon"><span class="flaticon-manager display-2 text-primary"></span></div>
+                  <h4 class="text-black mb-3">Transform Lives</h4>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                    texts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          --></div>
+        </div>
+      </section>
+
+      <section
+        class="site-section bg-light section-top-one"
+        id="training-section"
+      >
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="text-black">Vẽ ONE</h2>
+
+              <p>
+                Xung quanh nhà có gì thì thể hiện hết!.<br />Kiểm tra 4 phương 8
+                hướng để không bị sót vật thể nhé!
+              </p>
+            </div>
+            <div class="box-top-checkbox" data-id="box3">
+              <div class="box-editer">
+                <div style="display: flex; gap: 10px; margin-top: 10px">
+                  <button class="editer-button clickAllBtn">Click All</button>
+                  <button
+                    class="editer-button cancelEditBtn"
+                    style="display: none"
+                  >
+                    Huỷ
+                  </button>
+                  <button class="editer-button editToggleBtn">Sửa</button>
+                </div>
+
+                <div class="editer-wapper wrapper">
+                  <div class="list-top-checkbox"></div>
+                  <form class="editer-add addForm" style="display: none">
+                    <input
+                      type="text"
+                      class="newItemInput"
+                      placeholder="Nhập dòng mới"
+                    />
+                    <button type="submit">Thêm</button>
+                  </form>
+                </div>
+              </div>
+              <div class="box-chart">
+                <canvas class="progressChart"></canvas>
+                <div><strong class="percentText">0%</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="nonloop-block-13 owl-style owl-carousel">
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_1_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Life Coach Training</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_2_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Release Your Potential</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_3_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Transforming Lives</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_1_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Life Coach Training</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_2_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Release Your Potential</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="training">
+              <figure class="mb-4">
+                <img
+                  src="images/coach_3_sm.jpg"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <h3 class="text-black mb-3">Transforming Lives</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="site-section" id="testimonials-section" data-aos="fade">
+        <div class="container">
+          <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-lg-6 text-center mb-5">
+              <h2 class="text-black mb-2">Chấm điểm trên POINT</h2>
+            </div>
+          </div>
+          <div class="box-top-checkbox" data-id="box4">
+            <div class="box-editer">
+              <div style="display: flex; gap: 10px; margin-top: 10px">
+                <button class="editer-button clickAllBtn">Click All</button>
+                <button
+                  class="editer-button cancelEditBtn"
+                  style="display: none"
+                >
+                  Huỷ
+                </button>
+                <button class="editer-button editToggleBtn">Sửa</button>
+              </div>
+
+              <div class="editer-wapper wrapper">
+                <div class="list-top-checkbox"></div>
+                <form class="editer-add addForm" style="display: none">
+                  <input
+                    type="text"
+                    class="newItemInput"
+                    placeholder="Nhập dòng mới"
+                  />
+                  <button type="submit">Thêm</button>
+                </form>
+              </div>
+            </div>
+            <div class="box-chart">
+              <canvas class="progressChart"></canvas>
+              <div><strong class="percentText">0%</strong></div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="owl-carousel owl-style owl-carousel-one no-owl-nav">
+            <div>
+              <div class="block-testimony-1 text-center">
+                <blockquote class="mb-4">
+                  <p>
+                    &ldquo;Nhớ chấm đầy đủ các điểm ở trước nhà, sau nhà, quanh
+                    nhà và cả ngoài đường nữa!&rdquo;
+                  </p>
+                </blockquote>
+
+                <figure>
+                  <img
+                    src="images/avatar.jpg"
+                    alt="Image"
+                    class="img-fluid rounded-circle mx-auto"
+                  />
+                </figure>
+                <h3 class="font-size-20 text-black">Nhân viên ẩn danh</h3>
+              </div>
+            </div>
+
+            <div>
+              <div class="block-testimony-1 text-center">
+                <blockquote class="mb-4">
+                  <p>
+                    &ldquo;Đừng quên các điểm ở mép nhà.<br />Chấm vào để lấy độ
+                    cao ở mép nhà!.&rdquo;
+                  </p>
+                </blockquote>
+
+                <figure>
+                  <img
+                    src="images/avatar.jpg"
+                    alt="Image"
+                    class="img-fluid rounded-circle mx-auto"
+                  />
+                </figure>
+                <h3 class="font-size-20 mb-4 text-black">Nhân viên ẩn danh</h3>
+              </div>
+            </div>
+
+            <div>
+              <div class="block-testimony-1 text-center">
+                <blockquote class="mb-4">
+                  <p>
+                    &ldquo;Cố gắn làm kỹ từng bước để tránh sai cũng như dễ dàng
+                    check lại ở giai đoạn cuối!&rdquo;
+                  </p>
+                </blockquote>
+
+                <figure>
+                  <img
+                    src="images/avatar.jpg"
+                    alt="Image"
+                    class="img-fluid rounded-circle mx-auto"
+                  />
+                </figure>
+                <h3 class="font-size-20 text-black">Nhân viên ẩn danh</h3>
+              </div>
+            </div>
+
+            <!-- <div>
+              <div class="block-testimony-1 text-center">
+                <blockquote class="mb-4">
+                  <p>
+                    &ldquo;Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Est maxime adipisci incidunt voluptatum pariatur.
+                    Officia eaque ipsum ducimus. Separated they live in
+                    Bookmarksgrove right at the coast of the Semantics, a large
+                    language ocean.&rdquo;
+                  </p>
+                </blockquote>
+
+                <figure>
+                  <img
+                    src="images/avatar.jpg"
+                    alt="Image"
+                    class="img-fluid rounded-circle mx-auto"
+                  />
+                </figure>
+                <h3 class="font-size-20 mb-4 text-black">Nhân viên ẩn danh</h3>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section bg-primary" id="services-section">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="text-white">Chú thích</h2>
+              <p class="text-white">
+                Chú thích là giai đoạn yêu cầu vô cùng kỹ càng.<br />Chú thích
+                và đảm bảo từng chú thích đúng sẽ dễ dàng để check lại ở giai
+                đoạn cuối. <br />Làm kỹ càng nhé!
+              </p>
+            </div>
+            <div class="box-top-checkbox" data-id="box5">
+              <div class="box-editer">
+                <div style="display: flex; gap: 10px; margin-top: 10px">
+                  <button class="editer-button clickAllBtn">Click All</button>
+                  <button
+                    class="editer-button cancelEditBtn"
+                    style="display: none"
+                  >
+                    Huỷ
+                  </button>
+                  <button class="editer-button editToggleBtn">Sửa</button>
+                </div>
+
+                <div class="editer-wapper wrapper">
+                  <div class="list-top-checkbox"></div>
+                  <form class="editer-add addForm" style="display: none">
+                    <input
+                      type="text"
+                      class="newItemInput"
+                      placeholder="Nhập dòng mới"
+                    />
+                    <button type="submit">Thêm</button>
+                  </form>
+                </div>
+              </div>
+              <div class="box-chart">
+                <canvas class="progressChart"></canvas>
+                <div>
+                  <strong class="percentText" style="color: #fff">0%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
+            <div class="service bg-white">
+              <div class="icon">
+                <span class="flaticon-elearning display-2 text-primary"></span>
+              </div>
+              <h3 class="text-black mb-3">Online Coaching</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="service bg-white">
+              <div class="icon">
+                <span class="flaticon-target display-2 text-primary"></span>
+              </div>
+              <h3 class="text-black mb-3">Release Your Potential</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="service bg-white">
+              <div class="icon">
+                <span class="flaticon-group display-2 text-primary"></span>
+              </div>
+              <h3 class="text-black mb-3">Transforming Lives</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="service bg-white">
+              <div class="icon">
+                <span class="flaticon-elearning display-2 text-primary"></span>
+              </div>
+              <h3 class="text-black mb-3">Life Coach Training</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="service bg-white">
+              <div class="icon">
+                <span class="flaticon-group display-2 text-primary"></span>
+              </div>
+              <h3 class="text-black mb-3">Release Your Potential</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+
+            <div class="service bg-white">
+              <div class="icon">
+                <span
+                  class="flaticon-paper-plane display-2 text-primary"
+                ></span>
+              </div>
+              <h3 class="text-black mb-3">Transforming Lives</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+                maxime adipisci incidunt voluptatum pariatur. Officia eaque
+                ipsum ducimus.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="site-section" id="blog-section">
+        <div class="container">
+          <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-lg-6 text-center mb-5">
+              <h2 class="text-black mb-2">Vẽ hoa gió</h2>
+
+              <p>
+                Vẽ hoa gió và kiểm tra lại bằng cách nhập số liệu vào các ô
+                dưới.<br />Nhớ nhập lại để check nhé
+              </p>
+            </div>
+          </div>
+          <ul class="list-top-hoku">
+            <li>
+              <a
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/15gCEnFhXIrpK4VgPdNFapEjdvvrpity3uEq1fXIf-AQ/edit?gid=620015051#gid=620015051"
+                class="btn btn-warning px-5 py-3 text-white smoothscroll button-hoku"
+                >Danh sách dự án
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://vldb.gsi.go.jp/sokuchi/surveycalc/surveycalc/xy2blf.html"
+                class="btn btn-warning px-5 py-3 text-white smoothscroll button-hoku"
+                >Tìm độ　真北
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://maps.gsi.go.jp/#16/36.076616/139.366666/&base=std&ls=std&disp=1&vs=c1g1j1h0k0l0u0t0z0r0s0m0f1"
+                class="btn btn-warning px-5 py-3 text-white smoothscroll button-hoku"
+                >Tìm độ　磁北
+              </a>
+            </li>
+          </ul>
+          <div class="hoagio-input">
+            <div class="row">
+              <div class="field">
+                <label for="input1">Số ban đầu</label>
+                <input id="input1" class="input1" />
+              </div>
+            </div>
+
+            <!-- Hàng 2 -->
+            <div class="row">
+              <div class="field">
+                <label for="input2">Số ban đầu sau chuyển đổi</label>
+                <input id="input2" />
+              </div>
+
+              <div class="operator">+</div>
+
+              <div class="field">
+                <label for="input3">Số liệu trong 真北</label>
+                <input id="input3" />
+              </div>
+
+              <div class="operator">=</div>
+
+              <div class="field">
+                <label for="input4">Kết quả 真北 dạng độ</label>
+                <input id="input4" />
+              </div>
+
+              <div class="operator">=></div>
+
+              <div class="field">
+                <label for="input5">Kết quả 真北 dạng số</label>
+                <input id="input5" readonly />
+              </div>
+            </div>
+
+            <!-- Hàng 3 -->
+            <div class="row">
+              <div class="field">
+                <label for="input5-5">Kết quả 真北 dạng độ</label>
+                <input id="input5-5" readonly />
+              </div>
+
+              <div class="operator">-</div>
+
+              <div class="field">
+                <label for="input6">Độ thu được trong 磁北</label>
+                <input id="input6" />
+              </div>
+
+              <div class="operator">=</div>
+
+              <div class="field">
+                <label for="input7">Kết quả 磁北 dạng độ</label>
+                <input id="input7" readonly />
+              </div>
+
+              <div class="operator">=></div>
+
+              <div class="field">
+                <label for="input8">Kết quả 磁北 dạng số</label>
+                <input id="input8" readonly />
+              </div>
+            </div>
+
+            <!-- Hàng 4 -->
+            <div class="row">
+              <div class="field">
+                <label for="input9">真北</label>
+                <input id="input9" readonly />
+              </div>
+
+              <div class="field">
+                <label for="input10">磁北</label>
+                <input id="input10" readonly />
+              </div>
+            </div>
+          </div>
+          <h3>Check hoa gió</h3>
+          <div class="hoagio-check">
+            <div class="input-row">
+              <input id="inputA" placeholder="246-25-07" />
+              <span class="symbol">-</span>
+              <input id="inputB" placeholder="123-10-30" />
+              <span class="symbol">=</span>
+              <input id="inputC" readonly placeholder="Kết quả" />
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
+              <div class="d-lg-flex blog-entry">
+                <figure class="mr-4">
+                  <a href="single.html"
+                    ><img
+                      src="images/coach_1_sm.jpg"
+                      alt="Image"
+                      class="img-fluid rounded"
+                  /></a>
+                </figure>
+                <div class="blog-entry-text">
+                  <h3>
+                    <a href="single.html"
+                      >Coaching Life Is Better Than Schooling</a
+                    >
+                  </h3>
+                  <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Est maxime adipisci incidunt voluptatum pariatur. Officia
+                    eaque ipsum ducimus.
+                  </p>
+                  <p><a href="#" class="">Read More..</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="d-lg-flex blog-entry">
+                <figure class="mr-4">
+                  <a href="single.html"
+                    ><img
+                      src="images/coach_2_sm.jpg"
+                      alt="Image"
+                      class="img-fluid rounded"
+                  /></a>
+                </figure>
+                <div class="blog-entry-text">
+                  <h3>
+                    <a href="single.html"
+                      >Coaching Life Is Better Than Schooling</a
+                    >
+                  </h3>
+                  <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Est maxime adipisci incidunt voluptatum pariatur. Officia
+                    eaque ipsum ducimus.
+                  </p>
+                  <p><a href="#" class="">Read More..</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
+              <div class="d-lg-flex blog-entry">
+                <figure class="mr-4">
+                  <a href="single.html"
+                    ><img
+                      src="images/coach_3_sm.jpg"
+                      alt="Image"
+                      class="img-fluid rounded"
+                  /></a>
+                </figure>
+                <div class="blog-entry-text">
+                  <h3>
+                    <a href="single.html"
+                      >Coaching Life Is Better Than Schooling</a
+                    >
+                  </h3>
+                  <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Est maxime adipisci incidunt voluptatum pariatur. Officia
+                    eaque ipsum ducimus.
+                  </p>
+                  <p><a href="#" class="">Read More..</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="d-lg-flex blog-entry">
+                <figure class="mr-4">
+                  <a href="single.html"
+                    ><img
+                      src="images/coach_2_sm.jpg"
+                      alt="Image"
+                      class="img-fluid rounded"
+                  /></a>
+                </figure>
+                <div class="blog-entry-text">
+                  <h3>
+                    <a href="single.html"
+                      >Coaching Life Is Better Than Schooling</a
+                    >
+                  </h3>
+                  <span class="post-meta mb-3 d-block">April 17, 2019</span>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Est maxime adipisci incidunt voluptatum pariatur. Officia
+                    eaque ipsum ducimus.
+                  </p>
+                  <p><a href="#" class="">Read More..</a></p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <div class="site-section bg-light" id="contact-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="text-black">Check nộp</h2>
+            </div>
+          </div>
+          <div class="box-top-checkbox" data-id="box5">
+            <div class="box-editer">
+              <div style="display: flex; gap: 10px; margin-top: 10px">
+                <button class="editer-button clickAllBtn">Click All</button>
+                <button
+                  class="editer-button cancelEditBtn"
+                  style="display: none"
+                >
+                  Huỷ
+                </button>
+                <button class="editer-button editToggleBtn">Sửa</button>
+              </div>
+
+              <div class="editer-wapper wrapper">
+                <div class="list-top-checkbox"></div>
+                <form class="editer-add addForm" style="display: none">
+                  <input
+                    type="text"
+                    class="newItemInput"
+                    placeholder="Nhập dòng mới"
+                  />
+                  <button type="submit">Thêm</button>
+                </form>
+              </div>
+            </div>
+            <div class="box-chart">
+              <canvas class="progressChart"></canvas>
+              <div>
+                <strong class="percentText">0%</strong>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row mb-5">
+            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+              <p class="mb-0 font-weight-bold text-primary">Address</p>
+              <p class="mb-4">
+                203 Fake St. Mountain View, San Francisco, California, USA
+              </p>
+            </div>
+
+            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+              <p class="mb-0 font-weight-bold text-primary">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+            </div>
+            <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
+              <p class="mb-0 font-weight-bold text-primary">Email Address</p>
+              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 mb-5">
+              <form action="#" method="post">
+                <div class="form-group row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email address"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <textarea
+                      name=""
+                      id=""
+                      class="form-control"
+                      placeholder="Write your message."
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-6 mr-auto">
+                    <input
+                      type="submit"
+                      class="btn btn-block btn-primary text-white py-2 px-5"
+                      value="Send Message"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <footer class="site-footer bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="footer-heading mb-4">Lời cảm ơn!</h2>
+              <p>
+                Cảm ơn bạn đã đồng hành cùng tôi!<br />Chúc bạn làm bài không
+                bug, feedback tốt
+              </p>
+            </div>
+
+            <div class="col-md-3 ml-auto">
+              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#about-section" class="smoothscroll">Vẽ POINT</a>
+                </li>
+                <li>
+                  <a href="#training-section" class="smoothscroll">Vẽ ONE</a>
+                </li>
+                <li>
+                  <a href="#services-section" class="smoothscroll">Chú thích</a>
+                </li>
+                <li>
+                  <a href="#testimonials-section" class="smoothscroll"
+                    >Chấm điểm trên POINT</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact-section" class="smoothscroll"
+                    >Check and nộp</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <div class="mb-5">
+                <h2 class="footer-heading mb-4">Phím tắt</h2>
+                <a
+                  target="_blank"
+                  href="https://www.chatwork.com/"
+                  class="pl-0 pr-3"
+                >
+                  <img class="phimtat-img" src="./images/chatwork_hover.png"
+                /></a>
+                <a target="_blank" href="https://gigafile.nu/" class="pl-3 pr-3"
+                  ><img src="./images/gigafile_img.jfif" class="phimtat-img"
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://mazii.net/vi-VN"
+                  class="pl-3 pr-3"
+                  ><img class="phimtat-img" src="./images/mazii-img.png"
+                /></a>
+              </div>
+
+              <h2 class="footer-heading mb-4">Lấy tên file để nộp</h2>
+              <div class="footer-subscribe">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control border-secondary text-white bg-transparent"
+                    placeholder="Nhập tên bài"
+                    aria-label="Enter Email"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-primary text-black"
+                      type="button"
+                      id="button-laytenfile"
+                    >
+                      OKE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row pt-5 mt-5 text-left">
+            <div class="col-md-12">
+              <div class="border-top pt-5">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <p>
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  Website được code bởi Bình Phạm
+                  <i class="icon-heart-o" aria-hidden="true"></i>
+                  <!-- <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+                </p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- .site-wrap -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script src="js/typed.js"></script>
+    <script>
+      var typed = new Typed(".typed-words", {
+        strings: [
+          "おはようございます。",
+          " 点群の作業を一緒にやりましょう。",
+          " 宜しくお願いします。",
+        ],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true,
+      });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/list-checkbox.js"></script>
+    <script src="js/hoagio.js"></script>
+    <script src="js/lay-ten-file.js"></script>
+  </body>
+</html>
