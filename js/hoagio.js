@@ -1,4 +1,4 @@
-unction DMSStringToArcSeconds(dmsRaw) {
+function DMSStringToArcSeconds(dmsRaw) {
   if (!dmsRaw) return null;
   let dms = dmsRaw.replace(/′|’/g, "'").replace(/″|“|”|''/g, '"');
   const regex = /(-?)(\d+)°(\d+)'(\d+)?/;
