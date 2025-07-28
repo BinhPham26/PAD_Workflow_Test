@@ -18,9 +18,10 @@ function arcSecondsToDMS(totalArcSeconds) {
   const remainingSec = totalArcSeconds - degrees * 3600;
   const minutes = Math.floor(remainingSec / 60);
   const seconds = remainingSec - minutes * 60;
-  return `${sign}${degrees}°${minutes}'${seconds}''`;
+  return ${sign}${degrees}°${minutes}'${seconds}'';
 }
 
+// ✅ Sửa công thức chuyển từ DMS ➝ decimal degrees chuẩn
 function DMS_toCustomDecimal(dmsRaw) {
   if (!dmsRaw) return null;
   let dms = dmsRaw.replace(/′|’/g, "'").replace(/″|“|”|''/g, '"');
@@ -31,7 +32,8 @@ function DMS_toCustomDecimal(dmsRaw) {
   const deg = parseInt(match[2]);
   const min = parseInt(match[3]);
   const sec = match[4] ? parseInt(match[4]) : 0;
-  return sign * (deg + min / 60 + sec / 3600);
+  const result = deg + min / 60 + sec / 3600;
+  return sign * result;
 }
 
 function customDecimalToArcSeconds(decimal) {
@@ -54,7 +56,9 @@ function parseCustomDegreeInput(str) {
     .replace(/\*/g, "°");
   const regex1 = /^(-?\d+)°(\d+)'?$/;
   const regex2 = /^(-?\d+)°(\d+)'(\d+)"?$/;
-  let deg = 0, min = 0, sec = 0;
+  let deg = 0,
+    min = 0,
+    sec = 0;
   if (regex2.test(str)) {
     const match = str.match(regex2);
     deg = parseInt(match[1]);
@@ -82,11 +86,11 @@ document.getElementById("input1").addEventListener("input", () => {
   const decimalPart = val - degrees;
   const minutes = Math.floor(decimalPart * 60);
   const seconds = Math.round((decimalPart * 60 - minutes) * 60);
-  const dms = `${degrees}°${minutes}'${seconds}''`;
+  const dms = ${degrees}°${minutes}'${seconds}'';
   document.getElementById("input2").value = dms;
 });
 
-// 🔁 input2 + input3 → input4,5,9
+// 🔁 input2 + input3 → input4 (DMS), input5 (.dd), input9
 document.getElementById("input3").addEventListener("input", () => {
   const dms1 = document.getElementById("input2").value;
   const dms2 = document.getElementById("input3").value;
@@ -100,46 +104,45 @@ document.getElementById("input3").addEventListener("input", () => {
   const dmsResult = arcSecondsToDMS(totalArc);
   const customDecimal = DMS_toCustomDecimal(dmsResult);
   document.getElementById("input4").value = dmsResult;
-  document.getElementById("input5").value = customDecimal.toFixed(4);
-  document.getElementById("input9").value = customDecimal.toFixed(4);
+  document.getElementById("input5").value =
+    customDecimal !== null
+      ? customDecimal.toFixed(6).replace(/\.?0+$/, "")
+      : "";
+  document.getElementById("input9").value =
+    customDecimal !== null
+      ? customDecimal.toFixed(6).replace(/\.?0+$/, "")
+      : "";
   document.getElementById("input5-5").value = dmsResult;
 });
 
-// 🔁 input4 sửa tay → update input5,9,5-5
+// 🔁 input4 thủ công → input5, input9
 document.getElementById("input4").addEventListener("input", () => {
   const dms = document.getElementById("input4").value;
   const decimal = DMS_toCustomDecimal(dms);
-  if (decimal === null) {
-    document.getElementById("input5").value = "Lỗi";
-    document.getElementById("input9").value = "Lỗi";
-  } else {
-    document.getElementById("input5").value = decimal.toFixed(4);
-    document.getElementById("input9").value = decimal.toFixed(4);
-  }
+  document.getElementById("input5").value =
+    decimal !== null ? decimal.toFixed(6).replace(/\.?0+$/, "") : "Lỗi";
+  document.getElementById("input9").value =
+    decimal !== null ? decimal.toFixed(6).replace(/\.?0+$/, "") : "Lỗi";
   document.getElementById("input5-5").value = dms;
 });
 
-// 🔁 input6 - input5-5 → input7 (DMS), input8 (.dd), input10, input11
+// 🔁 input5-5 - input6 → input7 (DMS), input8 (.dd), input10
 document.getElementById("input6").addEventListener("input", () => {
-  const input5_5_dms = document.getElementById("input5-5").value;
-  const input6_raw = document.getElementById("input6").value;
-
-  const arc1 = DMSStringToArcSeconds(input5_5_dms); // input5-5
-  const val2Decimal = parseCustomDegreeInput(input6_raw); // input6
+  const dmsInput4 = document.getElementById("input4").value;
+  const val2Raw = document.getElementById("input6").value;
+  const arc1 = DMSStringToArcSeconds(dmsInput4);
+  const val2Decimal = parseCustomDegreeInput(val2Raw);
   const arc2 = customDecimalToArcSeconds(val2Decimal);
-
   if (arc1 === null || arc2 === null) {
     document.getElementById("input7").value = "Lỗi định dạng";
     return;
   }
-
-  const diffArc = arc2 - arc1; // ❗ input6 - input5-5
+  const diffArc = arc1 - arc2;
   const dmsResult = arcSecondsToDMS(diffArc);
   const decimal = DMS_toCustomDecimal(dmsResult);
-
   document.getElementById("input7").value = dmsResult;
-  document.getElementById("input8").value = decimal.toFixed(4);
-  document.getElementById("input10").value = decimal.toFixed(4);
-  const input11 = document.getElementById("input11");
-  if (input11) input11.value = decimal.toFixed(4);
+  document.getElementById("input8").value =
+    decimal !== null ? decimal.toFixed(6).replace(/\.?0+$/, "") : "";
+  document.getElementById("input10").value =
+    decimal !== null ? decimal.toFixed(6).replace(/\.?0+$/, "") : "";
 });
