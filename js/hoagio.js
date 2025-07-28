@@ -1,4 +1,4 @@
-function DMSStringToArcSeconds(dmsRaw) {
+ function DMSStringToArcSeconds(dmsRaw) {
   if (!dmsRaw) return null;
   let dms = dmsRaw.replace(/′|’/g, "'").replace(/″|“|”|''/g, '"');
   const regex = /(-?)(\d+)°(\d+)'(\d+)?/;
@@ -97,16 +97,16 @@ document.getElementById("input3").addEventListener("input", () => {
   const dmsResult = arcSecondsToDMS(totalArc);
   const customDecimal = DMS_toCustomDecimal(dmsResult);
   document.getElementById("input4").value = dmsResult;
-  document.getElementById("input5").value = customDecimal.toFixed(6);
-  document.getElementById("input9").value = customDecimal.toFixed(6);
+  document.getElementById("input5").value = customDecimal.toFixed(4);
+  document.getElementById("input9").value = customDecimal.toFixed(4);
   document.getElementById("input5-5").value = dmsResult;
 });
 
 document.getElementById("input4").addEventListener("input", () => {
   const dms = document.getElementById("input4").value;
   const decimal = DMS_toCustomDecimal(dms);
-  document.getElementById("input5").value = decimal !== null ? decimal.toFixed(6) : "Lỗi";
-  document.getElementById("input9").value = decimal !== null ? decimal.toFixed(6) : "Lỗi";
+  document.getElementById("input5").value = decimal !== null ? decimal.toFixed(4) : "Lỗi";
+  document.getElementById("input9").value = decimal !== null ? decimal.toFixed(4) : "Lỗi";
   document.getElementById("input5-5").value = dms;
 });
 
@@ -120,10 +120,10 @@ document.getElementById("input6").addEventListener("input", () => {
     document.getElementById("input7").value = "Lỗi định dạng";
     return;
   }
-  const diffArc = arc2 - arc1; // input6 - input5-5
+  const diffArc = arc1 - arc2; // input6 - input5-5
   const dmsResult = arcSecondsToDMS(diffArc);
   const decimal = DMS_toCustomDecimal(dmsResult);
   document.getElementById("input7").value = dmsResult;
-  document.getElementById("input8").value = decimal.toFixed(6);
-  document.getElementById("input10").value = decimal.toFixed(6);
+  document.getElementById("input8").value = decimal.toFixed(4);
+  document.getElementById("input10").value = decimal.toFixed(4);
 });
