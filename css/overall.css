@@ -1,0 +1,74 @@
+.form-top-overall {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  margin: 0 auto;
+  color: #000;
+  max-width: 900px;
+}
+
+.form-top-overall label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-top-overall input[type="text"],
+.form-top-overall input[type="number"],
+.form-top-overall select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.form-top-overall select {
+  cursor: pointer;
+}
+
+/* Xóa nút tăng giảm trên input number */
+.form-top-overall input[type="number"]::-webkit-inner-spin-button,
+.form-top-overall input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-top-overall input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.form-top-overall .col {
+  flex: 1;
+}
+
+.form-top-overall .checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  max-width: 566px;
+  width: 100%;
+}
+
+.form-top-overall .label-text {
+  flex: 1;
+}
+
+.form-top-overall .checkbox-group {
+  display: flex;
+  gap: 15px;
+  width: 200px;
+  justify-content: space-between;
+}
+
+/* Checkbox style */
+.form-top-overall .checkbox-group input[type="checkbox"] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.form-top-overall .checkbox-group label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
