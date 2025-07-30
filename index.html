@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/aos.css" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/overall.css" />
   </head>
   <body
     data-spy="scroll"
@@ -127,6 +128,68 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="form-top-overall">
+        <h2>Thông tin tổng quan dự án</h2>
+
+        <!-- Nhập số dự án -->
+        <label>Số dự án:</label>
+        <input
+          type="number"
+          id="soDuAn"
+          placeholder="Nhập số dự án (tối đa 4 số)"
+          maxlength="4"
+        />
+
+        <!-- Nhập tên dự án -->
+        <label>Tên dự án:</label>
+        <input type="text" id="tenDuAn" placeholder="Nhập tên dự án..." />
+
+        <!-- Nhập địa chỉ + Kết quả -->
+        <div class="row">
+          <div class="col">
+            <label>Địa chỉ:</label>
+            <input
+              type="text"
+              id="diaChi"
+              placeholder="Nhập địa chỉ dự án..."
+            />
+          </div>
+          <div class="col">
+            <label>Kết quả:</label>
+            <input type="text" id="ketQua" placeholder="Nhập kết quả..." />
+          </div>
+        </div>
+
+        <!-- FAIN dưới phần địa chỉ -->
+        <label>FAIN:</label>
+        <select id="fain">
+          <option value="アイ工務店様">アイ工務店様</option>
+          <option value="クリエイト礼文">クリエイト礼文</option>
+          <option value="中央グループ">中央グループ</option>
+        </select>
+
+        <!-- Có chỉ thị BM không -->
+        <div class="checkbox-row">
+          <label class="label-text">Có chỉ thị BM không?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="bmCo" /> Có</label>
+            <label><input type="checkbox" id="bmKhong" /> Không</label>
+          </div>
+        </div>
+
+        <!-- Có 計画建物 không -->
+        <div class="checkbox-row">
+          <label class="label-text">Có 計画建物 không?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="keikakuCo" /> Có</label>
+            <label><input type="checkbox" id="keikakuKhong" /> Không</label>
+          </div>
+        </div>
+
+        <!-- Thêm input diện tích -->
+        <label>Diện tích (m²):</label>
+        <input type="text" id="dienTich" placeholder="Nhập diện tích..." />
       </section>
       <section class="site-section" id="about-section">
         <div class="container">
@@ -976,7 +1039,7 @@
             </div>
 
             <div class="col-md-3 ml-auto">
-              <h2 class="footer-heading mb-4">Quick Links</h2>
+              <h2 class="footer-heading mb-4">Nội dung</h2>
               <ul class="list-unstyled">
                 <li>
                   <a href="#about-section" class="smoothscroll">Vẽ POINT</a>
@@ -1101,5 +1164,6 @@
     <script src="js/list-checkbox.js"></script>
     <script src="js/hoagio.js"></script>
     <script src="js/lay-ten-file.js"></script>
+    <script src="js/overall.js"></script>
   </body>
 </html>
