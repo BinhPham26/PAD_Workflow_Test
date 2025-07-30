@@ -31,9 +31,9 @@ function showLightbox() {
   contentBox.innerHTML = `
       ${generateRow("PDF", userInput)}
       ${generateRow("ONE", userInput)}
-      ${generateRow("File ảnh", userInput + " 現地写真")}
-      ${generateRow("Point", "納品【TREND-POINT】" + userInput)}
-      ${generateRow("Excel", userInput + " 写真台帳")}
+      ${generateRow("Folder ảnh", "境界標の写真")}
+      ${generateRow("Point", "【TREND-POINT】" + userInput)}
+      ${generateRow("Excel chứa ảnh","【現地写真】" + userInput)}
       ${generateRow("Excel list điểm", "座標リスト")}
       <div class="lightbox-close">Đóng</div>
     `;
