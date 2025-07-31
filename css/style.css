@@ -791,7 +791,7 @@ body:after {
 }
 .site-blocks-cover,
 .site-blocks-cover > .container > .row {
-  height: calc(80vh);
+  height: calc(57vh);
   min-height: 400px;
 }
 .site-blocks-cover.inner-page-cover,
