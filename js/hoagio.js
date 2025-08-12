@@ -127,3 +127,46 @@ document.getElementById("input6").addEventListener("input", () => {
   document.getElementById("input8").value = decimal.toFixed(4);
   document.getElementById("input10").value = decimal.toFixed(4);
 });
+function parseHyphenDMS(str) {
+  if (!str) return null;
+  str = str.trim().replace(/\s+/g, "");
+  // Cho phép dấu gạch ngang thường hoặc en-dash
+  const m = str.match(/^(-?)(\d+)[-–](\d{1,2})[-–](\d{1,2})$/);
+  if (!m) return null;
+
+  const sign = m[1] === "-" ? -1 : 1;
+  const deg = parseInt(m[2], 10);
+  const min = parseInt(m[3], 10);
+  const sec = parseInt(m[4], 10);
+
+  // Kiểm tra hợp lệ phút/giây
+  if (min >= 60 || sec >= 60) return null;
+
+  return sign * (deg * 3600 + min * 60 + sec);
+}
+
+function updateHoaGioCheck() {
+  const a = document.getElementById("inputA").value;
+  const b = document.getElementById("inputB").value;
+  const out = document.getElementById("inputC");
+
+  if (!a || !b) { out.value = ""; return; }
+
+  const arcA = parseHyphenDMS(a);
+  const arcB = parseHyphenDMS(b);
+
+  if (arcA === null || arcB === null) {
+    out.value = "Lỗi định dạng (ví dụ: 214-12-14)";
+    return;
+  }
+
+  const diffArc = arcA - arcB;                // A - B
+  const dmsResult = arcSecondsToDMS(diffArc); // dùng hàm sẵn có
+  out.value = dmsResult;                       // ví dụ: 10°10'2''
+}
+
+// Tự động tính mỗi khi người dùng nhập
+["inputA", "inputB"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener("input", updateHoaGioCheck);
+});
