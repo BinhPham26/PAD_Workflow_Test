@@ -2900,3 +2900,10 @@ body.no-scroll {
   transform: translateY(30px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+.btn-ggmap {
+      height: 63px;
+    align-self: center;
+    background-color: rgb(55, 58, 109);
+    cursor: pointer;
+    width: 180px;
+}
