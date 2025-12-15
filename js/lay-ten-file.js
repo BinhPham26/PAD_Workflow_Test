@@ -33,7 +33,7 @@ function showLightbox() {
       ${generateRow("Folder ảnh", "BM・境界標の写真")}
       ${generateRow("Excel list điểm", "座標リスト")}
        ${generateRow("Excel chứa ảnh","【写真帳】" + userInput)}
-      ${generateRow("PDF", userInput)}
+      ${generateRow("Checklist",【チェックリスト】" + userInput)}
       ${generateRow("ONE", userInput)}
       <div class="lightbox-close">Đóng</div>
     `;
