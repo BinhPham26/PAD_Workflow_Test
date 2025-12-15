@@ -29,7 +29,7 @@ function showLightbox() {
   const contentBox = document.createElement("div");
   contentBox.className = "lightbox-content";
   contentBox.innerHTML = `
-      ${generateRow("Point", "【TREND-POINT】" + userInput)}
+      ${generateRow("Point", "納品　【TREND-POINT】" + userInput)}
       ${generateRow("Folder ảnh", "BM・境界標の写真")}
       ${generateRow("Excel list điểm", "座標リスト")}
        ${generateRow("Excel chứa ảnh","【写真帳】" + userInput)}
